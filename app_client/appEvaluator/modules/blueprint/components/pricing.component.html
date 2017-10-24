@@ -1,0 +1,65 @@
+﻿<h4 class="card-header">
+  {{title}}
+  <span class="pull-xs-right tag tag-pill tag-primary">
+    {{ price | currency:"USD":true:"2.2-2" }}
+  </span>
+</h4>
+
+<br />
+
+<div class="row">
+  <div class="col-3">
+    <div class="pull-right">
+      <label for="first_name">Startup Year</label>
+    </div>
+  </div>
+
+  <div class="col-9">
+    <fieldset class="form-group">
+      <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+        <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle>Toggle dropdown</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownManual">
+          <button class="dropdown-item">Action - 1</button>
+          <button class="dropdown-item">Another Action</button>
+          <button class="dropdown-item">Something else is here</button>
+        </div>
+      </div>
+    </fieldset>
+
+  </div>
+</div>
+
+
+<div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
+  <label class="btn btn-primary">
+    <input type="radio" [value]="1"> Left (pre-checked)
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" value="middle"> Middle
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" [value]="false"> Right
+  </label>
+</div>
+<hr>
+<pre>{{model}}</pre>
+
+<form action="">
+  <input type="radio" [(ngModel)]="model.sex" name="sex" value="male">Male<br>
+  <input type="radio" [(ngModel)]="model.sex" name="sex" value="female">Female
+</form>
+
+<input type="button" value="select male" (click)="model.sex='male'">
+<input type="button" value="select female" (click)="model.sex='female'">
+<div>Selected Radio: {{model.sex}}</div>
+<pre>{{model | json  }}</pre>
+
+<input name="options" type="radio" [(ngModel)]="model.options" [value]="1" [checked]="model.options==1" /><br />
+<input name="options" type="radio" [(ngModel)]="model.options" [value]="2" [checked]="model.options==2" /><br />
+<pre>{{model.options}}</pre>
+
+<div class="row">
+  <div class="col-md-12"></div>
+</div>
+
+<img src="http://placehold.it/820x320">

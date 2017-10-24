@@ -1,0 +1,29 @@
+﻿<div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="revenueMode" [(ngModel)]="revenueEntityState.taxMode" value="Composite">
+      Composite
+    </label>
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="revenueMode" [(ngModel)]="revenueEntityState.taxMode" value="Separate">
+      Separate
+    </label>
+    <pre>{{revenueEntityState.taxMode}}</pre>
+  </div>
+</div>
+<hr />
+
+<div *ngIf="revenueEntityState.taxMode == 'Composite'">
+  <revenue-table></revenue-table>
+</div>
+
+<div *ngIf="revenueEntityState.taxMode == 'Separate'">
+  <ngb-tabset>
+    <ngb-tab *ngFor="let product of products">
+      <ng-template ngbTabTitle>{{product.name}}</ng-template>
+      <ng-template ngbTabContent>
+        <revenue-table product></revenue-table>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

@@ -1,0 +1,380 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>evaluator-ng4</Name>
+    <RootNamespace>evaluator-ng4</RootNamespace>
+    <ToolsVersionPromptShown>0.0</ToolsVersionPromptShown>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f97c763b-6f22-462a-acec-d1866f7963b1</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="app_client\appAuction\" />
+    <Folder Include="app_client\appEvaluator\" />
+    <Folder Include="app_client\appEvaluator\entry\" />
+    <Folder Include="app_client\appEvaluator\entry\footer\" />
+    <Folder Include="app_client\appEvaluator\entry\header\" />
+    <Folder Include="app_client\appEvaluator\entry\components\" />
+    <Folder Include="app_client\appEvaluator\entry\ngrx\" />
+    <Folder Include="app_client\appEvaluator\entry\ngrx\model\" />
+    <Folder Include="app_client\appEvaluator\modules\messages\" />
+    <Folder Include="app_client\appEvaluator\modules\" />
+    <Folder Include="app_client\appEvaluator\modules\blueprint\" />
+    <Folder Include="app_client\appEvaluator\modules\blueprint\components\" />
+    <Folder Include="app_client\appEvaluator\modules\blueprint\ngrx\" />
+    <Folder Include="app_client\appEvaluator\modules\cost\" />
+    <Folder Include="app_client\appEvaluator\modules\cost\components\" />
+    <Folder Include="app_client\appEvaluator\modules\cost\ngrx\" />
+    <Folder Include="app_client\appEvaluator\modules\dashboard\components\" />
+    <Folder Include="app_client\appEvaluator\modules\dashboard\ngrx\" />
+    <Folder Include="app_client\appEvaluator\modules\depreciation\" />
+    <Folder Include="app_client\appEvaluator\modules\depreciation\components\" />
+    <Folder Include="app_client\appEvaluator\modules\depreciation\ngrx\" />
+    <Folder Include="app_client\appEvaluator\modules\funds\components\" />
+    <Folder Include="app_client\appEvaluator\modules\funds\ngrx\" />
+    <Folder Include="app_client\appEvaluator\modules\invest\" />
+    <Folder Include="app_client\appEvaluator\modules\invest\components\" />
+    <Folder Include="app_client\appEvaluator\modules\invest\ngrx\" />
+    <Folder Include="app_client\appEvaluator\modules\liquidity\" />
+    <Folder Include="app_client\appEvaluator\modules\dashboard\" />
+    <Folder Include="app_client\appEvaluator\modules\funds\" />
+    <Folder Include="app_client\appEvaluator\modules\liquidity\components\" />
+    <Folder Include="app_client\appEvaluator\modules\liquidity\ngrx\" />
+    <Folder Include="app_client\appEvaluator\repo\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\common\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\common\actions\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\common\effects\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\common\models\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\common\reducers\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\common\services\" />
+    <Folder Include="app_client\appEvaluator\modules\ngx-redux\components\" />
+    <Folder Include="app_client\appEvaluator\modules\revenue\" />
+    <Folder Include="app_client\appEvaluator\modules\revenue\components\" />
+    <Folder Include="app_client\appEvaluator\modules\revenue\ngrx\" />
+    <Folder Include="app_client\app\" />
+    <Folder Include="app_client\assets\images\" />
+    <Folder Include="app_server\json\" />
+    <Folder Include="app_server\mongo\" />
+    <Folder Include="app_server\mongo\controllers\" />
+    <Folder Include="app_server\mongo\models\" />
+    <Folder Include="app_server\mongo\routes\" />
+    <Folder Include="e2e\" />
+    <Folder Include="app_server\" />
+    <Folder Include="app_client\" />
+    <Folder Include="app_client\assets\" />
+    <Folder Include="app_client\environments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app_client\appAuction\app.component.spec.ts" />
+    <TypeScriptCompile Include="app_client\appAuction\app.component.ts" />
+    <TypeScriptCompile Include="app_client\appAuction\app.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\app.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\app.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\components\entry.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\entry.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\footer\footer.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\header\header.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\components\notFound.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\entry.routing.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\blueprint-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\app-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\cost-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\dashboard-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\depreciation-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\funds-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\index.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\invest-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\liquidity-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\model\revenue-model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\entry.reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\entry\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\blueprint-settings-sphere.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\blueprint-settings-duration.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\planning-product.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\planning-sphere.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\components\connect-remote.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\components\connect-remote.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\components\dashboard-panel.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\components\connect-remote.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\components\depreciation-entry.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\components\connect-remote.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\components\connect-remote.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\components\liquidity-settings-default.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\components\liquidity-evaluate.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\components\liquidity-settings-funds.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\components\liquidity-settings.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\messages\errorHandler.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\messages\message.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\messages\message.model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\messages\message.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\messages\message.service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\blueprint.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\blueprint.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\blueprint-settings.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\planning.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\pricing.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\components\properties.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\blueprint\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\components\cost-evaluate.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\components\cost-operating.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\components\cost-settings.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\cost.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\cost.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\cost\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\dashboard.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\dashboard\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\depreciation.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\depreciation.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\components\depreciation-table.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\depreciation\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\funds.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\components\funds-loan.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\funds.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\components\funds-settings.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\components\funds-table.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\funds\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\invest.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\components\invest-investment.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\invest.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\components\invest-settings.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\components\invest-table.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\invest\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\liquidity.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\liquidity.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\liquidity\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\actions\currencies.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\actions\operations.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\effects\currencies.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\layout.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\models\operation.model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\reducers\currencies.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\reducers\index.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\reducers\operations.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\common\services\currency.service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\components\currencies.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\components\currencyPipe.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\components\new-operation.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\components\operations-list.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\ngx.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\ngx-redux\ngx.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\components\revenue-settings-vat.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\components\revenue-settings-modal.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\components\revenue-settings-taxs.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\components\revenue-settings.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\components\revenue-table.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\components\revenue-taxes.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\ngrx\actions.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\ngrx\effects.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\ngrx\model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\ngrx\service.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\revenue.component.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\modules\revenue\revenue.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\repo.module.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\repo.resolver.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\repo.localStorage.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\repo.model.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\repository-rest.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\repository-static.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\datasource-rest.ts" />
+    <TypeScriptCompile Include="app_client\appEvaluator\repo\datasource-static.ts" />
+    <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\app.po.ts" />
+    <TypeScriptCompile Include="app_client\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="app_client\environments\environment.ts" />
+    <TypeScriptCompile Include="app_client\main.ts" />
+    <TypeScriptCompile Include="app_client\polyfills.ts" />
+    <TypeScriptCompile Include="app_client\test.ts" />
+    <TypeScriptCompile Include="app_client\typings.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".angular-cli.json" />
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="app_client\appAuction\app.component.css" />
+    <Content Include="app_client\appAuction\app.component.html" />
+    <Content Include="app_client\appEvaluator\entry\components\entry.component.html" />
+    <Content Include="app_client\appEvaluator\entry\footer\footer.component.html" />
+    <Content Include="app_client\appEvaluator\entry\header\header.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\blueprint-settings-duration.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\blueprint-settings-sphere.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\planning-product.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\planning-sphere.component.html" />
+    <Content Include="app_client\appEvaluator\modules\cost\components\connect-remote.component.html" />
+    <Content Include="app_client\appEvaluator\modules\dashboard\components\connect-remote.component.html" />
+    <Content Include="app_client\appEvaluator\modules\dashboard\components\dashboard-panel.component.html" />
+    <Content Include="app_client\appEvaluator\modules\depreciation\components\connect-remote.component.html" />
+    <Content Include="app_client\appEvaluator\modules\depreciation\components\depreciation-entry.component.html" />
+    <Content Include="app_client\appEvaluator\modules\funds\components\connect-remote.component.html" />
+    <Content Include="app_client\appEvaluator\modules\invest\components\connect-remote.component.html" />
+    <Content Include="app_client\appEvaluator\modules\liquidity\components\liquidity-evaluate.component.html" />
+    <Content Include="app_client\appEvaluator\modules\liquidity\components\liquidity-settings-default.component.html" />
+    <Content Include="app_client\appEvaluator\modules\liquidity\components\liquidity-settings-funds.component.html" />
+    <Content Include="app_client\appEvaluator\modules\liquidity\components\liquidity-settings.component.html" />
+    <Content Include="app_client\appEvaluator\modules\messages\message.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\blueprint.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\blueprint-settings.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\planning.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\pricing.component.html" />
+    <Content Include="app_client\appEvaluator\modules\blueprint\components\properties.component.html" />
+    <Content Include="app_client\appEvaluator\modules\cost\components\cost-evaluate.component.html" />
+    <Content Include="app_client\appEvaluator\modules\cost\components\cost-operating.component.html" />
+    <Content Include="app_client\appEvaluator\modules\cost\components\cost-settings.component.html" />
+    <Content Include="app_client\appEvaluator\modules\cost\cost.component.html" />
+    <Content Include="app_client\appEvaluator\modules\dashboard\dashboard.component.html" />
+    <Content Include="app_client\appEvaluator\modules\depreciation\depreciation.component.html" />
+    <Content Include="app_client\appEvaluator\modules\depreciation\components\depreciation-table.component.html" />
+    <Content Include="app_client\appEvaluator\modules\funds\funds.component.html" />
+    <Content Include="app_client\appEvaluator\modules\funds\components\funds-loan.component.html" />
+    <Content Include="app_client\appEvaluator\modules\funds\components\funds-settings.component.html" />
+    <Content Include="app_client\appEvaluator\modules\funds\components\funds-table.component.html" />
+    <Content Include="app_client\appEvaluator\modules\invest\invest.component.html" />
+    <Content Include="app_client\appEvaluator\modules\invest\components\invest-investment.component.html" />
+    <Content Include="app_client\appEvaluator\modules\invest\components\invest-settings.component.html" />
+    <Content Include="app_client\appEvaluator\modules\invest\components\invest-table.component.html" />
+    <Content Include="app_client\appEvaluator\modules\liquidity\liquidity.component.html" />
+    <Content Include="app_client\appEvaluator\modules\ngx-redux\components\new-operation.template.html" />
+    <Content Include="app_client\appEvaluator\modules\ngx-redux\components\operations-list.template.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\components\revenue-settings-modal.component.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\components\revenue-settings-taxs.component.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\components\revenue-settings-vat.component.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\components\revenue-settings.component.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\components\revenue-table.component.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\components\revenue-taxes.component.html" />
+    <Content Include="app_client\appEvaluator\modules\revenue\revenue.component.html" />
+    <Content Include="app_client\assets\images\download.jpg" />
+    <Content Include="app_client\assets\styles.css" />
+    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="app_client\assets\.gitkeep" />
+    <Content Include="app_client\favicon.ico" />
+    <Content Include="app_client\index.html" />
+    <Content Include="app_client\tsconfig.app.json" />
+    <Content Include="app_client\tsconfig.spec.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app_server\json\application.js" />
+    <Compile Include="app_server\json\blueprint.js" />
+    <Compile Include="app_server\json\dashboard.js" />
+    <Compile Include="app_server\json\depreciation.js" />
+    <Compile Include="app_server\json\cost.js" />
+    <Compile Include="app_server\json\index.js" />
+    <Compile Include="app_server\json\liquidity.js" />
+    <Compile Include="app_server\json\invest.js" />
+    <Compile Include="app_server\json\funds.js" />
+    <Compile Include="app_server\json\revenue.js" />
+    <Compile Include="app_server\mongo\controllers\locations.js" />
+    <Compile Include="app_server\mongo\controllers\reviews.js" />
+    <Compile Include="app_server\mongo\models\db.js" />
+    <Compile Include="app_server\mongo\models\locations.js" />
+    <Compile Include="app_server\mongo\routes\index.js" />
+    <Compile Include="karma.conf.js" />
+    <Compile Include="protractor.conf.js" />
+    <Compile Include="restData.js" />
+    <Compile Include="server.js" />
+    <Compile Include="webpack.config.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

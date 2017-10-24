@@ -1,0 +1,14 @@
+﻿<div class="row">
+  <div class="col-9">
+    <button (click)="loadRevenue()">
+      Load Revenue
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-3">
+    <button *ngFor="let task of getTask()" class="btn btn-secondary btn-block" (click)="onChange($event)" name={{task}}
+            [routerLink]="['/revenue', task.toLowerCase()]" routerLinkActive="active">
+      {{task}}
+    </button>
+  </div>
+</div>

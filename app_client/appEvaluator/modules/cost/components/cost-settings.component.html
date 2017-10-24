@@ -1,0 +1,12 @@
+﻿<connect-remote [entityState]="entityState | async"></connect-remote>
+
+<div>
+  <ngb-tabset>
+    <ngb-tab *ngFor="let project of getProjects()">
+      <ng-template ngbTabTitle>{{project}}</ng-template>
+      <ng-template ngbTabContent>
+        aaaa
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

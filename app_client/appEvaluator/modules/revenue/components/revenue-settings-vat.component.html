@@ -1,0 +1,68 @@
+﻿<div>
+  <h4 class="card-header">
+    Tax Mode
+    <span class="pull-right tag tag-pill tag-primary">
+      <!--{{ price | currency:"USD":true:"2.2-2" }}-->
+    </span>
+  </h4>
+  <br />
+
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="first_name">Startup Year</label>
+      </div>
+    </div>
+
+    <div class="col-9">
+      <fieldset class="form-group">
+        <select class="form-control" name="staus" >
+          <option [value]="1" >17%</option>
+          <option [value]="0" >11%</option>
+          <option [value]="0" >6%</option>
+        </select>
+      </fieldset>
+    </div>
+  </div>
+
+</div>
+
+<div>
+  <h4 class="card-header">
+    Value Added Tax
+    <span class="pull-right tag tag-pill tag-primary">
+      <!--{{ price | currency:"USD":true:"2.2-2" }}-->
+    </span>
+  </h4>
+  <br />
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label>Input</label>
+      </div>
+    </div>
+    <div class="col-9">
+      <fieldset class="form-group">
+        <input type="number" class="form-control" 
+               [value]="revenueProjectRevenueState[0].valueAddedTax.inputValue"
+               >
+      </fieldset>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="first_name">Output</label>
+      </div>
+    </div>
+    <div class="col-9">
+      <fieldset class="form-group">
+        <input type="number" class="form-control"
+               [value]="revenueProjectRevenueState[0].valueAddedTax.outputValue">
+      </fieldset>
+    </div>
+  </div>
+
+</div>
+

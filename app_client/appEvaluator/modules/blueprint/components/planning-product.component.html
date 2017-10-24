@@ -1,0 +1,71 @@
+﻿<br />
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="period_year">Product Name</label>
+      </div>
+    </div>
+    <div class="col-9">
+      <fieldset class="form-group">
+        <input type="text" class="form-control"
+               [formControl]="productName"
+               [(ngModel)]="product.name">
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="first_name">Output</label>
+      </div>
+    </div>
+    <div class="col-3">
+      <fieldset class="form-group">
+        <input type="number" class="form-control"
+               [formControl]="productOutput"
+               [(ngModel)]="product.output" >
+      </fieldset>
+    </div>
+    <div class="col-3">
+      <fieldset class="form-group">
+        <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+          <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle>Toggle dropdown</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownManual">
+            <button class="dropdown-item">Action - 1</button>
+            <button class="dropdown-item">Another Action</button>
+            <button class="dropdown-item">Something else is here</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-3">
+      <fieldset class="form-group">
+        <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+          <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle>Toggle dropdown</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownManual">
+            <button class="dropdown-item">Action - 1</button>
+            <button class="dropdown-item">Another Action</button>
+            <button class="dropdown-item">Something else is here</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="first_name">Price</label>
+      </div>
+    </div>
+    <div class="col-9">
+      <fieldset class="form-group">
+        <input type="number" class="form-control"  
+               [formControl]="productPrice"
+               [(ngModel)]="product.price">
+      </fieldset>
+    </div>
+  </div>
+</form>

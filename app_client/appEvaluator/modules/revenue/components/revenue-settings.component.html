@@ -1,0 +1,12 @@
+﻿<revenue-settings-vat 
+                      [revenueEntityState]="revenueEntityState | async"
+                      [revenueProjectRevenueState]="revenueProjectRevenueState | async"
+                      >
+
+</revenue-settings-vat>
+<hr />
+<revenue-settings-taxs 
+                       [revenueEntityState]="revenueEntityState | async" 
+                       [products]="products | async" 
+                       >
+</revenue-settings-taxs>

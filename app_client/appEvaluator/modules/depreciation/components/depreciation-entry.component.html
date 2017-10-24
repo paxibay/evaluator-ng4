@@ -1,0 +1,39 @@
+﻿<connect-remote [entityState]="entityState | async"></connect-remote>
+
+<br />
+<hr />
+<div>
+  <h4 class="card-header">
+    Value Added Tax
+    <span class="pull-right tag tag-pill tag-primary">
+      <!--{{ price | currency:"USD":true:"2.2-2" }}-->
+    </span>
+  </h4>
+  <br />
+
+  <div class="form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="revenueMode" id="mode1" [(ngModel)]="taxMode" value="composite">
+      Composite
+    </label>
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="revenueMode" id="mode2" [(ngModel)]="taxMode" value="separate">
+      Separate
+    </label>
+    <pre>{{taxMode}}</pre>
+  </div>
+</div>
+<hr />
+
+<div>
+  <h4 class="card-header">
+    Value Added Tax
+    <span class="pull-right tag tag-pill tag-primary">
+      <!--{{ price | currency:"USD":true:"2.2-2" }}-->
+    </span>
+  </h4>
+  <br />
+
+  <div><depreciation-table></depreciation-table></div>
+
+</div>

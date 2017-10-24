@@ -1,0 +1,53 @@
+﻿<div>
+  <h4 class="card-header">
+    Sphere
+    <span class="pull-right tag tag-pill tag-primary">
+      <!--{{ 1400 | currency:"USD":true:"2.2-2" }}-->
+    </span>
+  </h4>
+  <br />
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="first_name">Evaluation Criterion</label>
+      </div>
+    </div>
+    <div class="col-9">
+      <div *ngIf="valueObjectState != undefined">
+        <div class="form-check" *ngFor="let option of valueObjectState.sphere.evaluationCriterion let idx = index">
+          <label class="form-check-label">
+            <input type="radio" name="criterionRadios" class="form-check-input" #id
+                   [checked]="idx==evaluationCriterionId"
+                   [value]="option.id"
+                   (change)="evaluationCriterionEvent.emit(id.value)">
+            {{option.description}}
+          </label>
+        </div>
+        <pre>{{option | json  }}</pre>
+      </div>
+       
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <div class="pull-right">
+        <label for="first_name">Evaluation System</label>
+      </div>
+    </div>
+    <div class="col-9">
+      <div *ngIf="valueObjectState != undefined">
+        <div class="form-check" *ngFor="let option of valueObjectState.sphere.evaluationSystem let idx = index">
+          <label class="form-check-label">
+            <input type="radio" name="evaluationRadios" class="form-check-input" #id
+                   [checked]="idx==evaluationSystemId"
+                   [value]="option.id"
+                   (change)="evaluationSystemEvent.emit(id.value)">
+            {{option.description}}
+          </label>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
