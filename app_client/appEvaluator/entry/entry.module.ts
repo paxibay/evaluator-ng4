@@ -1,4 +1,4 @@
-﻿import { NgModule }             from "@angular/core";
+import { NgModule }             from "@angular/core";
 import { BrowserModule }        from "@angular/platform-browser";
 import { CommonModule }         from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -37,6 +37,8 @@ import { InvestModule }         from "../modules/invest/invest.module";
 import { FundsModule }          from "../modules/funds/funds.module";
 import { DepreciationModule }   from "../modules/depreciation/depreciation.module";
 import { NgxModule }            from "../modules/ngx-redux/ngx.module";
+
+import { DashboardFirstGuard } from "./components/dashboardFirst.guard"; 
 
 export const IMPORTS_MODULES = [
     BrowserModule,
@@ -82,6 +84,6 @@ export const IMPORTS_MODULES = [
     imports: [...IMPORTS_MODULES],
     declarations: [EntryComponent, HeaderComponent, FooterComponent, NotFoundComponent],
     exports: [EntryComponent, ServiceModule],
-    providers: [ApplicationService]
+    providers: [ApplicationService, DashboardFirstGuard]
 })
 export class EntryModule { }
